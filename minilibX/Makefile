@@ -15,11 +15,11 @@ CFLAGS+= -DSTRINGPUTX11 -w
 all: $(NOM)
 
 $(NOM):	$(OBJ)
-	ar -r $(NOM) $(OBJ)
+	@ar -r $(NOM) $(OBJ)
 	ranlib $(NOM)
 
 clean:
-	rm -f $(NOM) $(OBJ) *~
-	rm -f mlx_app
+	@rm -f $(NOM) $(OBJ) *~
+	@rm -f mlx_app
 
 re: clean all
